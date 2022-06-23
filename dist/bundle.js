@@ -146,7 +146,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _addtask__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./addtask */ \"./src/addtask.js\");\n/* harmony import */ var _deletetask__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./deletetask */ \"./src/deletetask.js\");\n/* harmony import */ var _edittask__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./edittask */ \"./src/edittask.js\");\n/* harmony import */ var _styles_style_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./styles/style.scss */ \"./src/styles/style.scss\");\n\r\n\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack://to-do-list/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _addtask__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./addtask */ \"./src/addtask.js\");\n/* harmony import */ var _deletetask__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./deletetask */ \"./src/deletetask.js\");\n/* harmony import */ var _edittask__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./edittask */ \"./src/edittask.js\");\n/* harmony import */ var _styles_style_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./styles/style.scss */ \"./src/styles/style.scss\");\n/* harmony import */ var _page_load_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./page-load.js */ \"./src/page-load.js\");\n\r\n\r\n\r\n\r\n\r\n\r\n(0,_page_load_js__WEBPACK_IMPORTED_MODULE_4__.pageLoad)();\r\n\n\n//# sourceURL=webpack://to-do-list/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/page-load.js":
+/*!**************************!*\
+  !*** ./src/page-load.js ***!
+  \**************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"pageLoad\": () => (/* binding */ pageLoad)\n/* harmony export */ });\nconst pageLoad = () => {\r\n    const content = document.querySelector('.content');\r\n\r\n    const section = document.createElement('div');\r\n    section.classList.add(\"container\");\r\n    content.appendChild(section);\r\n   \r\n    const app = document.createElement('div');\r\n    app.classList.add('app')\r\n    app.textContent = \"TO DO LIST\"\r\n    \r\n\r\n    const form = document.createElement('form');\r\n    form.setAttribute(\"method\", \"post\");\r\n    form.setAttribute(\"action\", \"submit.php\");\r\n    app.append(form);\r\n\r\n    const task = document.createElement(\"input\");\r\n    task.setAttribute(\"type\", \"text\");\r\n    task.setAttribute(\"name\", \"Task\");\r\n    task.setAttribute(\"placeholder\", \"ADD NEW TASK\");\r\n    form.appendChild(task);\r\n\r\n\r\n\r\n    section.appendChild(app);\r\n\r\n}\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack://to-do-list/./src/page-load.js?");
 
 /***/ })
 
