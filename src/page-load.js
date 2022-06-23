@@ -21,11 +21,11 @@ export const pageLoad = () => {
     task.setAttribute("placeholder", "ADD NEW TASK");
     form.appendChild(task);
 
-
+    const add = document.createElement("input");
+    add.setAttribute("type", "submit");
+    add.setAttribute("value", "Add Task");
+    form.appendChild(add)
 
     section.appendChild(app);
 
 }
-
-
-
