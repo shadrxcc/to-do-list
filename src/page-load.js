@@ -19,6 +19,7 @@ export const pageLoad = () => {
     task.setAttribute("type", "text");
     task.setAttribute("name", "Task");
     task.setAttribute("placeholder", "ADD NEW TASK");
+    task.classList.add("input-task")
     form.appendChild(task);
 
     const add = document.createElement("input");
@@ -38,8 +39,5 @@ export const pageLoad = () => {
     checkbox.setAttribute("value", "Completed")
     li.appendChild(checkbox)
 
-
-
     section.appendChild(app);
-
 }
