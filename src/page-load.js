@@ -26,6 +26,20 @@ export const pageLoad = () => {
     add.setAttribute("value", "Add Task");
     form.appendChild(add)
 
+    const ul = document.createElement("ul")
+    app.append(ul)
+
+    const li = document.createElement("li")
+    ul.appendChild(li)
+
+    const checkbox = document.createElement('input');
+    checkbox.setAttribute("type", "checkbox")
+    checkbox.setAttribute("name", "checkbox")
+    checkbox.setAttribute("value", "Completed")
+    li.appendChild(checkbox)
+
+
+
     section.appendChild(app);
 
 }
