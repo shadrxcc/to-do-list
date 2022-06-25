@@ -1,10 +1,16 @@
 export const pageLoad = () => {
+    
     const content = document.querySelector('.content');
       
     const logoText = document.createElement('h1');
     logoText.classList.add('logoText');
     logoText.textContent = "TO DO LIST";
     content.append(logoText);
+      
+    const error = document.createElement('h1');
+    error.classList.add('error');
+    error.textContent = "";
+    content.append(error);
 
     const section = document.createElement('div');
     section.classList.add("container");
@@ -13,29 +19,29 @@ export const pageLoad = () => {
     const app = document.createElement('div');
     app.classList.add('app')
 
-
-    
-
     const form = document.createElement('form');
     form.setAttribute("method", "post");
-    form.setAttribute("action", "submit.php");
+    form.setAttribute("action", "");
+    form.setAttribute("onsubmit", "onFormSubmit()");
     app.append(form);
 
     const task = document.createElement("input");
     task.setAttribute("type", "text");
-    task.setAttribute("name", "Task");
-    task.classList.add('input-type');
+    task.setAttribute("name", "todoName");
+    task.setAttribute("id", "todoName");
+    task.classList.add('todoName');
     task.setAttribute("placeholder", "ADD NEW TASK");
-    task.classList.add("input-task")
     form.appendChild(task);
 
     const add = document.createElement("input");
     add.setAttribute("type", "submit");
-    add.classList.add('input-button');
+    add.setAttribute("id", "submit");
+    add.classList.add('addInput-button');
     add.setAttribute("value", "Add Task");
     form.appendChild(add)
 
     const ul = document.createElement("ul")
+    ul.setAttribute('id', 'ulList')
     app.append(ul)
 
     const li = document.createElement("li")
@@ -48,4 +54,5 @@ export const pageLoad = () => {
     li.appendChild(checkbox)
 
     section.appendChild(app);
+
 }

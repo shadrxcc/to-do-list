@@ -29,9 +29,12 @@ body {
     margin: 20px;
     padding-left: 40px;
     padding-right: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.input-type {
+.todoName {
     height: 30px;
     padding: 5px;
     border: #c9c9c9;
@@ -40,18 +43,18 @@ body {
     margin-bottom: 10px;
 }
 
-.input-type:focus {
+.todoName:focus {
     outline: none;
 }
 
-.input-button {
+.addInput-button {
     padding: 5px;
     border: 1px solid #a9a7a7;
     height: 35px;
     border-radius: 5px;
 }
 
-.input-button:hover {
+.addInput-button:hover {
     color: rgb(54, 54, 54);
     background-color: rgb(181, 181, 181);
     cursor: pointer;
@@ -60,4 +63,19 @@ body {
 
 ul {
     list-style: none;
+}
+
+.list-item {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    margin-bottom: 10px;
+    background: #d9d9d9;
+    justify-content: space-evenly;
+    width: 250px;
+    border-radius: 20px;
+}
+
+.trash {
+    cursor: pointer;
 }
