@@ -19,6 +19,7 @@
   "homepage": "https://github.com/shadrxcc/to-do-list#readme",
   "devDependencies": {
     "css-loader": "^6.7.1",
+    "date-fns": "^2.28.0",
     "sass": "^1.53.0",
     "sass-loader": "^13.0.0",
     "style-loader": "^3.3.1",

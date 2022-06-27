@@ -1,70 +1,31 @@
-import { addTask, deleteTask } from "./addtask";
-import { check } from './checked.js';
+import { createToDo } from "./addtask";
+import { displayDefaultProject, displayTheForm, addItemToCheckList, clearForm, displayToDo } from './initial-dom.js';
 import './styles/style.scss';
 import { pageLoad } from "./page-load.js";
+import { blankProjectLoad } from "./blank.js";
+
+blankProjectLoad();
 
 pageLoad();
+displayToDo();
 
-const mainList = document.getElementById('ulList');
+// Click events module
+let clickEventsModule = (function() {
 
-let myTasks = [];
+    // Click event for displaying the form
+    const addNewToDo = document.querySelector(".add-todo-button");
+    addNewToDo.addEventListener("click", displayTheForm);
 
-// Save to local storage
-function saveToStorage(todoArr) {
-  localStorage.setItem('todos', JSON.stringify(todoArr));
-}
+    // Click event for adding an item to the checklist on the form
+    const addToChecklist = document.querySelector(".add-to-checklist");
+    addToChecklist.addEventListener("click", addItemToCheckList);
 
-// Display Tasks
-function displayTasks() {
-    mainList.innerHTML = '';
-    myTasks.forEach((myTask) => {
-      const content = `<input id="checking" type="checkbox"> <span class="description">${myTask.todoName}</span><i id="del" class="trash"> remove</i>`;
-  
-      const listItem = document.createElement('li');
-      listItem.innerHTML = `${content}`;
-      listItem.className = 'list-item';
-      mainList.appendChild(listItem);
+    // Click event to clear the form
+    const clearButton = document.querySelector(".reset-button");
+    clearButton.addEventListener("click", clearForm);
 
-      const checkbox = document.getElementById('checking');
-      const trashIcon = document.getElementById('del');
-
-      checkbox.checked = myTask.completed;
-      checkbox.addEventListener('change', () => {
-        check(checkbox, myTask);
-        saveToStorage(myTasks);
-      });
-
-
-    });
-  }
-
-  // Add new task with enter icon
-  const enterBtn = document.getElementById('submit');
-  enterBtn.onclick = () => {
-    addTask(myTasks);
-    displayTasks();
-  };
-  
-  // Add new task with enter keypress
-  const inputList = document.getElementById('todoName');
-  inputList.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter') {
-      addTask(myTasks);
-      displayTasks();
-    }
-  });
-
-    // Get from local storage
-    function getFromStorage() {
-        const local = JSON.parse(localStorage.getItem('todos'));
-        if (local) {
-        myTasks = local;
-        }
-        if (myTasks.length === 0) {
-        ulList.innerHTML = '<li class="list-item">To-Do List is empty.</li>';
-        } else {
-        displayTasks();
-        }
-    }
-
-    window.onload = getFromStorage();
+    // Click event to submit a new todo form to project
+    const submitButton = document.querySelector(".submit-button");
+    submitButton.addEventListener("click", createToDo);
+    
+})();
