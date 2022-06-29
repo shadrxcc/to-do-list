@@ -82,8 +82,6 @@ export const pageLoad = () => {
     reset.innerHTML = "reset-button";
     reset.classList.add('reset-button');
     form.appendChild(reset);
-    
-    
 
     const add = document.createElement("input");
     add.setAttribute("type", "submit");
