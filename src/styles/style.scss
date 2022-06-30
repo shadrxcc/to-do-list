@@ -14,19 +14,18 @@ $buttonColor: #a9a7a7;
   padding: 0;
 }
 
-
 body {
   box-sizing: border-box;
   background: $primaryColor;
 }
 
 .logoText {
-  padding-left: 5px;
   margin-bottom: 30px;
   border-bottom: 1px solid #000;
   background: #fff;
   color: $textColor;
   padding: 10px;
+  padding-left: 5px;
   text-align: center;
 }
 
@@ -41,7 +40,8 @@ body {
   display: flex;
   flex-direction: column;
 }
-.form{
+
+.form {
   order: 1;
 }
 
@@ -73,7 +73,7 @@ body {
   order: 2;
   border-collapse: collapse;
   margin: 5px;
-  width: -webkit-fill-available;
+  width: fit-content;
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -85,7 +85,7 @@ body {
   text-align: left;
 }
 
-.myItem:nth-child(even){
+.myItem:nth-child(even) {
   background-color: #f2f2f2;
 }
 
@@ -116,16 +116,16 @@ body {
   .app {
     padding: 20px;
     align-self: center;
-    width: -webkit-fill-available;
+    width: fit-content;
     margin: 20px;
-   }
+  }
 
-  .todoName{
+  .todoName {
     display: block;
-    width: -webkit-fill-available;
-   }
+    width: fit-content;
+  }
 
   .date-rem {
     display: none;
-   }
+  }
 }
