@@ -1,0 +1,133 @@
+$primaryColor: rgb(236, 236, 236);
+$textColor: #000;
+$buttonColor: #a9a7a7;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  background: $primaryColor;
+}
+
+.logoText {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #000;
+  background: #fff;
+  color: $textColor;
+  padding: 10px;
+  padding-left: 5px;
+  text-align: center;
+}
+
+.app {
+  padding: 30px;
+  box-shadow: 2px 2px 5px 5px #c9c9c9;
+  background: rgb(231, 231, 231);
+  padding-left: 50px;
+  padding-right: 50px;
+  width: fit-content;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.form {
+  order: 1;
+}
+
+.todoName {
+  height: 30px;
+  padding: 5px;
+  border: #c9c9c9;
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.todoName:focus {
+  outline: none;
+}
+
+.submit-button {
+  padding: 5px;
+  border: 1px solid $buttonColor;
+  height: 35px;
+  border-radius: 5px;
+}
+
+.submit-button:hover {
+  color: rgb(54, 54, 54);
+  background-color: rgb(181, 181, 181);
+  cursor: pointer;
+  transition: ease-in-out 0.5s;
+}
+
+.showItem {
+  order: 2;
+  border-collapse: collapse;
+  margin: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.myItem {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.myItem:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.delete {
+  padding: 5px;
+  border: 1px solid $buttonColor;
+  height: 25px;
+  border-radius: 5px;
+}
+
+.delete:hover {
+  color: rgb(54, 54, 54);
+  background-color: rgb(181, 181, 181);
+  cursor: pointer;
+  transition: ease-in-out 0.5s;
+}
+
+.removeAll {
+  order: 3;
+  margin: 20px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px dotted $buttonColor;
+}
+
+.removeAll:hover {
+  color: rgb(54, 54, 54);
+  background-color: rgb(181, 181, 181);
+  cursor: pointer;
+  transition: ease-in-out 0.5s;
+}
+
+@media screen and (max-width: 600px) {
+  .app {
+    padding: 20px;
+    align-self: center;
+    width: auto;
+    margin: 20px;
+  }
+
+  .todoName {
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+
+  .date-rem {
+    display: none;
+  }
+}

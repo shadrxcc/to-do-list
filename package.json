@@ -1,0 +1,31 @@
+{
+  "name": "to-do-list",
+  "version": "1.0.0",
+  "description": ">",
+  "main": "webpack.config.js",
+  "scripts": {
+    "build": "webpack",
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shadrxcc/to-do-list.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shadrxcc/to-do-list/issues"
+  },
+  "homepage": "https://shadrxcc.github.io/to-do-list",
+  "devDependencies": {
+    "css-loader": "^6.7.1",
+    "date-fns": "^2.28.0",
+    "gh-pages": "^4.0.0",
+    "sass": "^1.53.0",
+    "sass-loader": "^13.0.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0"
+  }
+}
