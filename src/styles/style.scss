@@ -69,7 +69,7 @@ body {
   order: 2;
   border-collapse: collapse;
   margin: 5px;
-  width: fit-content;
+  width: -webkit-fill-available;
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -118,13 +118,13 @@ body {
   .app {
     padding: 20px;
     align-self: center;
-    width: fit-content;
+    width: -webkit-fill-available;
     margin: 20px;
   }
 
   .todoName {
     display: block;
-    width: fit-content;
+    width: -webkit-fill-available;
   }
 
   .date-rem {

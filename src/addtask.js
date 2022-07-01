@@ -5,7 +5,7 @@ export const add = (taskArray) => {
     const taskTitle = document.getElementById('title');
     const taskDate = document.getElementById('date');
 
-    if (taskTitle.value  === '') {
+    if (taskTitle.value  == '' || taskDate.value == "") {
         return;
     }
     const task = {
