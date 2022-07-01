@@ -1,5 +1,5 @@
 # to-do-list
-> 
+> We created a simple interface to-do list with properties like title, due date, and a checklist. It has featues like displaying your tasks, marking complete and deleting.
 
 ## Home Page
 ![screenshot](./src/img/home.png)
@@ -9,7 +9,7 @@ HTML <br> CSS <br> JavaScript
 
 ## Live Demo
 
-[Live Demo link]()
+[Live Demo link](https://shadrxcc.github.io/to-do-list)
 
 ## Authors
 
