@@ -1,4 +1,4 @@
-import { add, removeTask, check, clearChecked } from './addtask.js';
+import { add, removeTask, check, clearDone } from './addtask.js';
 
 import './styles/style.scss';
 
@@ -13,13 +13,15 @@ const saveToStorage = (taskArray) => {
 function show() {
     showList.innerHTML = "";
     myTasks.forEach((myTask) => {
-        const item = `<td><input type="checkbox" > </td><td> ${myTask.title} </td><td class="date-rem"> ${myTask.Date} </td><td><button class="delete" id="del" type="button">delete</button></td>`;
+        const item = `<td class="chec"><input type="checkbox" > </td><td> ${myTask.title} </td><td class="date-rem"> ${myTask.Date} </td><td><button class="delete" id="del" type="button">delete</button></td>`;
                      const myItem = document.createElement('tr');
                      myItem.innerHTML = `${item}`;
                      myItem.classList.add ('myItem');
+                     myItem.setAttribute ('id', 'myItem');
                      showList.appendChild(myItem);
 
-                     const checkbox = myItem.firstChild;
+                     const checkin = myItem.firstChild;
+                     const checkbox = checkin.firstChild;
                      checkbox.checked = myTask.completed;
                      checkbox.addEventListener('change', () => {
                        check(checkbox, myTask);
@@ -52,7 +54,7 @@ enterBtn.addEventListener('keypress', (e) => {
 
 const removeAll = document.getElementById('all-item');
 removeAll.addEventListener('click', () => {
-    clearChecked(myTasks);
+    clearDone(myTasks);
     window.location.reload();
   });
 

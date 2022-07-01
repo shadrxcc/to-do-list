@@ -37,7 +37,7 @@ export const check = (checkbox, tasklist) => {
     }
 }
 
-export const clearChecked = (taskArray) => {
+export const clearDone = (taskArray) => {
     taskArray = taskArray.filter((task) => !task.completed);
     taskArray.forEach((task) => {
       task.index = taskArray.indexOf(task) + 1;
