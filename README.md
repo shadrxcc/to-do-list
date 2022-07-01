@@ -2,7 +2,7 @@
 > 
 
 ## Home Page
-![screenshot](.src/img/home.png)
+![screenshot](./src/img/home.png)
 
 ## Built With 
 HTML <br> CSS <br> JavaScript
