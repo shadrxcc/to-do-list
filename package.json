@@ -6,7 +6,9 @@
   "scripts": {
     "build": "webpack",
     "deploy": "gh-pages -d dist",
-    "test": "jest"
+    "test": "jest",
+    "jest": "jest --env=node --colors --coverage test",
+    "start": "npm run build && node dist/index.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +22,9 @@
   },
   "homepage": "https://shadrxcc.github.io/to-do-list",
   "devDependencies": {
+    "@babel/cli": "^7.18.10",
+    "@babel/core": "^7.18.10",
+    "@babel/preset-env": "^7.18.10",
     "css-loader": "^6.7.1",
     "date-fns": "^2.28.0",
     "gh-pages": "^4.0.0",
@@ -29,5 +34,9 @@
     "style-loader": "^3.3.1",
     "webpack": "^5.73.0",
     "webpack-cli": "^4.10.0"
+  },
+  "dependencies": {
+    "jest-environment-jsdom-latest": "^26.6.2",
+    "jsdom": "^20.0.0"
   }
 }

@@ -2,7 +2,6 @@ export const inputBut = () => {
     const content = document.querySelector('.app');
     const form = document.createElement('form');
     form.setAttribute("method", "post");
-    form.setAttribute("action", "");
     form.setAttribute("id", "add-todo");
     form.classList.add('form');
     form.setAttribute("onsubmit", "event.preventDefault()");
@@ -22,7 +21,7 @@ export const inputBut = () => {
     date.setAttribute("id", "date");
     date.classList.add('todoName');
     form.append(date);
-    
+
     const sub = document.createElement("input");
     sub.setAttribute("type", "submit");
     sub.setAttribute("name", "submit");

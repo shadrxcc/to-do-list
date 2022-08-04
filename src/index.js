@@ -11,9 +11,9 @@ const saveToStorage = (taskArray) => {
 }
 
 function show() {
-    showList.innerHTML = "";
-    myTasks.forEach((myTask) => {
-        const item = `<td class="chec"><input type="checkbox" > </td><td> ${myTask.title} </td><td class="date-rem"> ${myTask.Date} </td><td><button class="delete" id="del" type="button">delete</button></td>`;
+  showList.innerHTML = "";
+  myTasks.forEach((myTask) => {
+      const item = `<td class="chec"><input type="checkbox" > </td><td> ${myTask.title} </td><td class="date-rem"> ${myTask.Date} </td><td><button class="delete" id="del" type="button">delete</button></td>`;
                      const myItem = document.createElement('tr');
                      myItem.innerHTML = `${item}`;
                      myItem.classList.add ('myItem');
@@ -34,10 +34,8 @@ function show() {
                             show();
                             window.location.reload();
                         });
-    });
-
-    
-}
+                      });
+                    }
 
 const enterBtn = document.getElementById('submit');
 enterBtn.onclick = () => {
