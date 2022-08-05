@@ -11,12 +11,16 @@
         <h1 class="logoText">TO DO LIST</h1>
         <div class="container">
             <div class="app">
-            
             <table id="showItem" class="showItem">
                
             </table>
-    <button type="button" id="all-item" class="removeAll">Clear fields</button>
-                 
+            <button type="button" id="all-item" class="removeAll">Clear Done Tasks</button>
+            <h5 id="messagedrop"></h5>
+            <form method="post" id="add-todo" class="form" onsubmit="event.preventDefault()">
+                <input type="text" name="title" id="title" class="todoName" placeholder="ADD NEW TODO LIST">
+                <input type="date" name="date" id="date" class="todoName">
+                <input type="submit" name="submit" id="submit" class="submit-button">
+            </form> 
             </div>
         </div>
     </div>

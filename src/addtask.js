@@ -1,14 +1,12 @@
-import { inputBut } from './form.js';
-inputBut();
-
   export const add = (taskArray) => {
     const taskTitle = document.getElementById('title');
     const taskDate = document.getElementById('date');
 
-    if (taskTitle.value  == '' || taskDate.value == "") {
+    if (taskTitle.value  === "" || taskDate.value === "") {
+      const message = document.getElementById("messagedrop");
+      message.innerHTML = "Please Input a name and date Correctly";
         return;
     }
-
     const task = {
         title: taskTitle.value,
         Date: taskDate.value,

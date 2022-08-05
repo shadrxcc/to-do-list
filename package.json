@@ -36,7 +36,11 @@
     "webpack-cli": "^4.10.0"
   },
   "dependencies": {
+    "jest-environment-jsdom": "^28.1.3",
     "jest-environment-jsdom-latest": "^26.6.2",
     "jsdom": "^20.0.0"
+  },
+  "directories": {
+    "test": "tests"
   }
 }
