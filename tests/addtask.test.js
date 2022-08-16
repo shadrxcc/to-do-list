@@ -1,21 +1,24 @@
 /**
  * @jest-environment jsdom
  */
-
 import {add, removeTask, check, clearDone} from '../src/addtask.js';
 
 describe('add task to the list', () =>{
-  document.body.innerHTML = '<input type="text" name="title" id="title" class="todoName" placeholder="ADD NEW TODO LIST">';
-  document.body.innerHTML = '<input type="date" name="date" id="date" class="todoName">';
+  document.body.innerHTML =
+  '<div id="cont">' +
+  '  <input type="text" id="title" />' +
+  '  <input type="text" id="date" />' +
+  '</div>';
   const taskTitle = document.getElementById('title');
   const taskDate = document.getElementById('date');
   
   taskTitle.value = 'Going to church';
   taskDate.value = '2022-08-10';
+
   const task = [];
-  test('add three task to list', () =>{
-    add(task);
-    expect(task).toHaveLength(2);
+  add(task);
+  test('add two task to list', () =>{
+    expect(task).toHaveLength(1);
   });
 
   test('Check title of first task', () => {
@@ -23,7 +26,7 @@ describe('add task to the list', () =>{
   });
 
   test('Check date of first task', () => {
-    expect(task[0].Date).toBe('2022-08-10');
+    expect(task[0].date).toBe('2022-08-10');
   });
 
   test('Check status of first task', () => {

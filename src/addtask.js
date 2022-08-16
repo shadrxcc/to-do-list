@@ -2,14 +2,20 @@
     const taskTitle = document.getElementById('title');
     const taskDate = document.getElementById('date');
 
-    if (taskTitle.value  === "" || taskDate.value === "") {
+   
+    if (taskTitle.value  === "") {
       const message = document.getElementById("messagedrop");
-      message.innerHTML = "Please Input a name and date Correctly";
+      message.innerHTML = "Please Input a name Correctly";
+        return;
+    }
+    if (taskDate.value === "") {
+      const message = document.getElementById("messagedrop");
+      message.innerHTML = "Please Input a date Correctly";
         return;
     }
     const task = {
         title: taskTitle.value,
-        Date: taskDate.value,
+        date: taskDate.value,
         completed: false,
         index: taskArray.length + 1,
     };
